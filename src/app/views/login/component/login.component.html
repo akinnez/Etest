@@ -1,0 +1,26 @@
+<main class="container-fluid">
+    <div class="login-cont">
+                <h2>Welcome back</h2>
+                <div class="text">
+                    <span>Sign in to get the most out of Oda N' Pay.</span>
+                </div>
+                <form action="" [formGroup]="form" (submit)="navigate()">
+                    <div class="input-cont">
+                        <i><mat-icon>perm_identity</mat-icon></i>
+                        <input type="text" placeholder="Email or Username" required formControlName='user'>
+                    </div>
+                    <div class="input-cont">
+                        <i><mat-icon>key</mat-icon></i>
+                        <input type="password" placeholder="Password" required formControlName='password'>
+                    </div>
+                   <div class="forget">
+                        <a routerLink="#">Forget Password?</a>
+                   </div>
+                    <div><button class="btn login-btn">Login</button></div>
+                    <div class="forget text-center">
+                        <span>Dont have an account?... </span><a routerLink="/signup">Sign up</a>
+                    </div>
+                </form>
+               
+            </div>
+</main>

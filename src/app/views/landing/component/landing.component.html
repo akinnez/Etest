@@ -1,0 +1,27 @@
+<main>
+    <div class="container-fluid">
+        <div class="{{!token ? 'd-none' : ''}} d-flex justify-content-end">
+            <a mat-button [matMenuTriggerFor]="menu" class=" me-3"><h5 style="cursor: pointer;">Welcome {{params}}</h5></a>
+                <mat-menu #menu="matMenu">
+                <button mat-menu-item>Profile</button>
+                <button mat-menu-item>Sign Out</button>
+                </mat-menu>
+        </div>
+        <div class="banner">
+            <img src="../../../../assets/banner.png" alt="banner-logo">
+        </div>
+        <div class="sales mt-4">
+             <div class="card my-3" *ngFor="let detail of details">
+                <div class="card-header">
+                    <cite class="d-block fw-bold fs-3">{{detail.deals}}</cite>
+                    <span>{{detail.hype}}</span>
+                    <div class="row w-100 m-0 p-0">
+                            <div class="col-sm-6 col-md-4 col-lg-3 my-3" *ngFor="let prod of detail.fxn">
+                                <app-prod-card [prod]="prod"></app-prod-card>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

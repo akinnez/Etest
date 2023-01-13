@@ -1,0 +1,128 @@
+:root{
+    --primary-color: #1C1C1C;
+    --secondary: #fff;
+}
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    transition: all 500ms linear;
+}
+header{
+    font-size: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items:center ;
+    padding: 15px 50px;
+    background: var(--secondary);
+    color: var(--primary-color);
+    box-shadow: 0 0 1.5rem #262626;
+}
+header .logo{
+    font-size: 30px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+header nav.nav{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+header nav.nav a{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0 0.7rem;
+    color: var(--primary-color);
+    padding: 1rem 1.5rem;
+    transition: all 0.6s linear;
+    border-radius: 5px;
+}
+header nav.nav a:hover{
+   cursor: pointer; 
+}
+header .btn{
+    cursor: pointer;
+    color: var(--primary-color);
+}
+header .menu-btn,header .close-btn{
+     display: none;
+}
+header .login-btn{
+    color: #1C1C1C;
+    padding: 5px 10px;
+}
+header .login-btn:hover{
+   background-color: #1C1C1C;
+   color: #fff;
+}
+form.search-cont, header .login-btn{
+    border: 1.5px solid #1C1C1C;
+    border-radius: 5px;
+}
+.menu{
+    display: none;
+}
+form input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 3px 7px;
+}
+form button{
+    padding: 3px 7px;
+}
+form button mat-icon{
+    display: flex;
+}
+@media screen and (max-width:1160px) {
+    form.search-cont{
+        display: none
+    }
+
+}
+
+@media screen and (max-width:991px) {
+    header{
+        position: relative;
+        padding: 1rem 1.5rem;
+        font-size: 55%;
+    }
+    header .menu-btn,header .close-btn{
+        display: block;
+    }
+    header .nav{
+        position: fixed;
+        left: -300px;
+        top: 0;
+        color: #fff;
+        flex-direction: column;
+        min-width: 300px;
+        height: 100vh;
+        background: #1C1C1C;
+        align-items: flex-start;
+        justify-content: left ;
+    }
+    // .menu{
+    //     display: block;
+    // }
+    header .active2{
+        left: 0px;
+        z-index: 1;
+    }
+    header .nav .close-btn{
+        position: absolute;
+        top: 0;
+        margin: 35px;
+    }
+    header .nav a{
+        width: 100%;
+        font-size: 1.5rem;
+        margin: 0.5rem 15px;
+    }
+    header .logo{
+        font-size: 25px;
+    }
+
+}

@@ -1,0 +1,26 @@
+<header>
+        <div>
+            <button class="btn menu-btn" (click)="open()"><mat-icon>view_headline</mat-icon></button>
+        </div>
+        <a routerLink="home" class="navbar-brand logo">Oda N' Pay</a>
+    <nav class="nav {{isOpen ? 'active2' : ''}}">
+            <button class="btn close-btn" (click)="close()"><mat-icon class="text-white">clear</mat-icon></button>
+            <a routerLink="home" class="active">Home</a>
+            <a routerLink="products">Products</a>
+            <a routerLink="contact">Contact</a>
+            <a routerLink="about">About</a>
+    
+    </nav>
+   
+        <div class="d-flex">
+         <form class="search-cont" action="">
+                <input type="text">
+                <button class="btn"><mat-icon>search</mat-icon></button>
+            </form>
+            <div class="ms-3 d-flex align-items-center">
+                <a routerLink="login" *ngIf="!token"><button class="btn login-btn">Login</button></a>
+                <mat-icon  *ngIf="token">shopping_cart</mat-icon>
+            </div>
+        </div>
+        
+</header>

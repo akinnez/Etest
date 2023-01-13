@@ -1,0 +1,22 @@
+.banner,img{
+   height: 600px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.menu{
+    display: none;
+}
+.card,.card-header{
+    background-color: white !important;
+}
+@media (max-width:2000px) {
+    .banner,img{
+        height: unset;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .menu{
+    display: block;
+}
+}

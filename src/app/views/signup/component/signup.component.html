@@ -1,0 +1,35 @@
+<main class="container-fluid">
+    <div class="login-cont">
+                <h2>Welcome</h2>
+                <div class="text">
+                    <span>Create an account to get started with Oda N' Pay.</span>
+                </div>
+                <form action="" [formGroup]="form" (submit)="navigate()">
+                    <div class="input-cont">
+                        <i><mat-icon>account_circle</mat-icon></i>
+                        <input type="text" placeholder="First Name" required formControlName='firstname'>
+                    </div>
+                    <div class="input-cont">
+                        <i><mat-icon>account_circle</mat-icon></i>
+                        <input type="text" placeholder="Last Name" required formControlName='lastname'>
+                    </div>
+                    <div class="input-cont">
+                        <i><mat-icon>mail</mat-icon></i>
+                        <input type="text" placeholder="Email" required formControlName='email'>
+                    </div>
+                    <div class="input-cont">
+                        <i><mat-icon>perm_identity</mat-icon></i>
+                        <input type="text" placeholder="Username" required formControlName='username'>
+                    </div>
+                    <div class="input-cont">
+                        <i><mat-icon>key</mat-icon></i>
+                        <input type="password" placeholder="Password" required formControlName='password'>
+                    </div>
+                    <div><button class="btn login-btn">Create an account</button></div>
+                    <div class="forget text-center">
+                        <span>Already have an account?... </span><a routerLink="/login">Log in</a>
+                    </div>
+                </form>
+               
+            </div>
+</main>

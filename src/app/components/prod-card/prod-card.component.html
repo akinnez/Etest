@@ -1,0 +1,20 @@
+
+  <mat-card class="example-card" (click)="checkval()">
+    <img mat-card-image [src]="prod.image" alt="{{prod.title.length > 50 ? prod.title.slice(0,50)+ '...' :  prod.title }}">
+    <mat-card-content>
+        <div class="text-center my-2">
+            <span>{{prod.title.length > 45 ? prod.title.slice(0,50)+ '...' :  prod.title }}</span>
+        </div>
+      <div>
+        <h6 class="my-3">Price: {{prod.price * 670 | currency:'NGN':'&#8358;':'1.2-2'}}</h6>
+      </div>
+    </mat-card-content>
+    <mat-card-footer>
+        
+    </mat-card-footer>
+
+    <mat-card-actions align="end" *ngIf="token" class="mb-2">
+      <button class="btn">PAY</button>
+      <button class="btn">ADD TO CART</button>
+    </mat-card-actions>
+  </mat-card>
